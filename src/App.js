@@ -18,4 +18,23 @@ class App extends Component {
   }
 }
 
+const TodoForm = ({addTodo}) => {
+  // tracks input
+  let input;
+
+  return (
+    <div>
+      <input ref={node => {
+        input = node;
+      }} />
+      <button onClick={() => {
+        addTodo(input.value);
+        input.value = '';
+      }}>
+        +
+      </button>
+    </div>
+  )
+}
+
 export default App;
