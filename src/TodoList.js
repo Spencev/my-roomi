@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import TodoItems from "./TodoItems";
+import "./TodoList.css";
 
 class TodoList extends Component {
   constructor(props, context) {
@@ -12,7 +14,7 @@ class TodoList extends Component {
   }
   // addItem event handler
   addItem(e) {
-    const itemArray = this.state.items; // may need to be var or let
+    let itemArray = this.state.items; // may need to be var or const, not sure yet
 
     if (this._inputElement.value !== "") {
       itemArray.unshift({
@@ -45,6 +47,7 @@ class TodoList extends Component {
 					  <button type="submit">add</button>
 					</form>
 				</div>
+        <TodoItems entries={this.state.items}/>
 		  </div>
     );
   }
