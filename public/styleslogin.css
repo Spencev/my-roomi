@@ -1,0 +1,211 @@
+html {
+	font-family: 'Helvetica';
+	background-color: #027a42;
+	
+}
+
+body{
+	color: white;
+	background-color: #027a42;
+	margin-top: 100px;
+}
+
+#title{
+	color:white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#username{
+	text-align: center;
+}
+
+#password{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input{
+	font-size: 20px;
+	padding: 3px 10px;
+	border-radius: 8px;
+}
+
+#signin {
+	border-radius: 4px;
+	background-color: #0066ff;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 24px;
+	padding: 2px;
+	width: 240px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 1px;
+}
+
+#signin span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#signin span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -50px;
+  transition: 0.5s;
+}
+
+#signin span {
+  padding-right: 25px;
+}
+
+#signin:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#or{
+	margin-top: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#facebook{
+	margin-top: 10px;
+} 
+
+#started{
+	margin-top: 30px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#signup {
+    display: inline-block;
+    position: relative;
+	border: none;
+    padding: 0.67em;
+    overflow: hidden;
+    text-decoration: none;
+	border-radius: 4px;
+    font-size: 2em;
+    outline: none;
+    color: #FFF;
+    background: #0066ff;
+    cursor: pointer;
+}
+
+#signup span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+#signup:before,
+#signup:after {
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+
+/* :before */
+
+#signup:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+/* :after */
+
+#signup:after {
+    content: attr(data-active);
+    -webkit-transform: translate(150%,0);
+    -moz-transform: translate(150%,0);
+    -ms-transform: translate(150%,0);
+    -o-transform: translate(150%,0);
+    transform: translate(150%,0);
+}
+
+/* Span on :hover and :active */
+
+#signup:hover span,
+#signup:active span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+/*  
+    We show :before pseudo-element on :hover 
+    and :after pseudo-element on :active 
+*/
+
+#signup:hover:before,
+#signup:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+/* 
+  We hide :before pseudo-element on :active
+*/
+
+#signup:active:before {
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+#forgot{
+	text-decoration: underline;
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
